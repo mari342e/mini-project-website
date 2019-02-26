@@ -31,11 +31,26 @@
           <div class="navbar">
             <img src="@/assets/logo.png" alt="logo" class="logo">
             <ul class="nav">
-              <li class="nav__item nav__item--has-children"><router-link to="/">Mens</router-link></li>
-              <li class="nav__item nav__item--has-children"><router-link to="/">Womens</router-link></li>
+              <li class="nav__item nav__item--has-children">
+                <router-link to="/">Mens</router-link>
+                <div class="content">
+                  <dropdown-nav/>
+                </div>
+                </li>
+              <li class="nav__item nav__item--has-children">
+                <router-link to="/">Womens</router-link>
+                <div class="content">
+                  <dropdown-nav/>
+                </div>
+              </li>
               <li class="nav__item"><router-link to="/about">The Brand</router-link></li>
               <li class="nav__item"><router-link to="/">Local Stores</router-link></li>
-              <li class="nav__item nav__item--has-children nav__item--last"><router-link to="/">Look Book</router-link></li>
+              <li class="nav__item nav__item--has-children nav__item--last">
+                <router-link to="/">Look Book</router-link>
+                <div class="content">
+                  <dropdown-nav/>
+                </div>
+              </li>
             </ul>
             <div class="search">
               <input type="text" placeholder="Search..">
@@ -47,11 +62,16 @@
 </template>
 
 <script>
+import DropdownNav from "@/components/DropdownNav";
+
 export default {
   data() {
     return {
       currencies: ["GBP", "DKK", "USD", "EURO"]
     };
+  },
+  components: {
+    DropdownNav
   }
 };
 </script>
@@ -187,6 +207,8 @@ header {
         }
 
         &--has-children {
+          display: inline-block;
+
           &:before {
             font-family: 'FontAwesome';
             content: '\f107';
@@ -194,6 +216,22 @@ header {
             top: 15px;
             left: 25px;
           } 
+
+          .content {
+            display: none;
+            position: absolute;
+            background-color: $light-accent-color;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            padding: 20px;
+            z-index: 1;
+          }
+
+          &:hover {
+            .content {
+              display: block;
+            }
+          }
         }
       }
     }

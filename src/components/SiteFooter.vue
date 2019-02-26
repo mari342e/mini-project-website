@@ -5,7 +5,7 @@
         <div class="footer">
           <div class="footer__lists">
             <div class="list">
-              <h3 class="list__title">Information</h3>
+              <h4 class="list__title">Information</h4>
               <ul class="list__items">
                 <li><router-link to="/about">The brand</router-link></li>
                 <li><a href="#">Local stores</a></li>
@@ -15,7 +15,7 @@
               </ul>
             </div>
             <div class="list">
-              <h3 class="list__title">Why buy from us</h3>
+              <h4 class="list__title">Why buy from us</h4>
               <ul class="list__items">
                 <li><a href="#">Shopping & returns</a></li>
                 <li><a href="#">Secure shopping</a></li>
@@ -25,7 +25,7 @@
               </ul>
             </div>
             <div class="list">
-              <h3 class="list__title">Look book</h3>
+              <h4 class="list__title">Look book</h4>
               <ul class="list__items">
                 <li><a href="#">Latest posts</a></li>
                 <li><a href="#">Men's lookbook</a></li>
@@ -33,7 +33,7 @@
               </ul>
             </div>
             <div class="list">
-              <h3 class="list__title">Your account</h3>
+              <h4 class="list__title">Your account</h4>
               <ul class="list__items">
                 <li><router-link to="/signin-register">Sign In</router-link></li>
                 <li><router-link to="/signin-register">Register</router-link></li>
@@ -43,7 +43,7 @@
               </ul>
             </div>
             <div class="list">
-              <h3 class="list__title">Contact details</h3>
+              <h4 class="list__title">Contact details</h4>
               <p>
                 <b>Head Office:</b><br>
                 Avenue Fashion<br>
@@ -109,11 +109,7 @@ footer {
       align-items: flex-start;
       .list {
         &__title {
-          font-size: 1em;
-          text-transform: uppercase;
           padding-bottom: 20px;
-          font-family: 'Montserrat', sans-serif;
-          font-weight: 700;
         }
         &__items {
           list-style-type: none;
@@ -167,10 +163,10 @@ footer {
           }
         }
         .award {
-          color: $light-accent-color;
           font-size: 2em;
           text-transform: uppercase;
           text-align: center;
+          font-family: 'Montserrat', sans-serif;
         }
       }
     }
