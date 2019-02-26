@@ -80,7 +80,7 @@
     </div>
     <div class="dark-bg">
       <p class="copyright">
-        © 2016 Avenue Fashion™ 
+        © 2019 Avenue Fashion™ 
       </p>
     </div>
   </footer>
@@ -178,6 +178,7 @@ footer {
   .copyright {
     text-align: center;
     padding: 12px 0;
+    font-weight: 700;
   }
 }
 </style>
