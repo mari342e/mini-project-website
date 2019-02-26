@@ -85,7 +85,7 @@ h3 {
   color: $text-color;
 }
 
-.button {
+.btn {
   color: $text-color;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;

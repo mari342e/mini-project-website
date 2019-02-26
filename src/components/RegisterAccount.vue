@@ -18,7 +18,12 @@
           <input type="checkbox" name="signup-checkbox" value="yes" v-model="signupCheckbox">
           <label for="signup-checkbox">Sign up for exclusive updates, discounts, new arrivals, and more!</label>
         </div>
-        <button class="button" type="submit">Create account</button>
+        <div class="button">
+          <button class="btn" type="submit">Create account</button>
+          <div class="button__statement">
+            By clicking 'Create Account', you agree to our <a href="#">Privary Police <font-awesome-icon icon="arrow-right" /></a>
+          </div>
+        </div>
       </form>
     </template>
     <template v-else>
@@ -42,7 +47,6 @@ export default {
     signup() {
       this.$validator.validate().then(result => {
         if (result) {
-          alert("You are now registered");
           this.submitted = true; 
         }
       });

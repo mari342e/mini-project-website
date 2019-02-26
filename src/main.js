@@ -2,12 +2,12 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faShoppingCart, faAngleDown } from '@fortawesome/free-solid-svg-icons'
+import { faShoppingCart, faAngleDown, faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { faFacebookF, faInstagram, faTwitter, faPinterest } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import VeeValidate from 'vee-validate'
 
-library.add(faShoppingCart, faAngleDown, faFacebookF, faInstagram, faTwitter, faPinterest)
+library.add(faShoppingCart, faAngleDown, faArrowRight, faFacebookF, faInstagram, faTwitter, faPinterest)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.use(VeeValidate)
 Vue.config.productionTip = false

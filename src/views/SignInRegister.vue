@@ -7,7 +7,7 @@
     <div class="container">
       <div class="forms">
         <sign-in class="forms__item"/>
-        <register-account class="forms__item"/>
+        <register-account class="forms__item forms__item--last"/>
       </div>
     </div>
   </main>
@@ -34,7 +34,13 @@ export default {
   padding: 40px 0;
 
   &__item {
-    width: 440px;
+    width: 450px;
+    padding: 0 20px 0 0;
+
+    &--last {
+      border-left: 1px solid $light-accent-color;
+      padding: 0 0 0 20px;
+    }
   }
 
   input {
@@ -45,7 +51,7 @@ export default {
     border-radius: 0;
     -webkit-appearance: none;
     padding: 5px 10px;
-    margin: 10px 0;
+    margin: 30px 0 0;
     width: 100%;
     height: 35px;
 
@@ -59,13 +65,13 @@ export default {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    margin-bottom: 10px;
+    margin: 30px 0 0 ;
 
     input[type=checkbox]{
       padding: 0;
-      margin: 10px 10px 10px 0;
       width: 20px;
       height: 20px;
+      margin: 0 10px 0 0 ;
 
       &:checked {
         background-color: $accent-color;
@@ -76,6 +82,18 @@ export default {
   .error-msg {
     color: firebrick;
     font-weight: bold;
+  }
+
+  .button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+
+    &__statement {
+      width: 50%;
+      text-align: right;
+    }
   }
 }
 </style>
