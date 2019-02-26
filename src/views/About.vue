@@ -1,13 +1,19 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+  <main>
+    <site-title>
+      <h1 slot="title"><b>The</b> brand</h1>
+      <h2 slot="sub-title">Avenue Fashion</h2>
+    </site-title>
+  </main>
 </template>
 
 <script>
+import SiteTitle from "@/components/SiteTitle";
 export default {
-  
-}
+  components: {
+    SiteTitle
+  }
+};
 </script>
 
 <style lang="scss">
