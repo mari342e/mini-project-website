@@ -56,17 +56,31 @@ a:hover {
 h1 {
   font-size: 2.5em;
   font-weight: normal;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
 }
 
 h2 {
   font-size: 1.5em;
   font-weight: normal;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
 }
 
 h3 {
-  font-size: 1.3em;
+  font-size: 1.2em;
   text-transform: uppercase;
-  padding-bottom: 20px;
+  font-family: 'Montserrat', sans-serif;
+  padding-bottom: 0px;
+  color: $dark-accent-color;
+}
+
+h4 {
+  font-size: 1em;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  padding-bottom: 0px;
 }
 
 .container {
