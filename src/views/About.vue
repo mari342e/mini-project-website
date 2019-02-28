@@ -57,12 +57,11 @@ export default {
 <style lang="scss">
 .about {
   padding: 40px 0;
-  margin-bottom: 40px;
   display: grid;
   grid-template-columns: 440px 440px;
-  grid-template-rows: 20% 20% 20% 20% 20%;
+  grid-template-rows: 136.5px 136.5px 136.5px 136.5px 136.5px;
   grid-column-gap: 20px;
-  grid-row-gap: 8px;
+  grid-row-gap: 20px;
   grid-template-areas: 
     "i1 tb1"
     "i1 i2"
