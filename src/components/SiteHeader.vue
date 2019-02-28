@@ -26,38 +26,40 @@
         </div>
       </div>
     </div>
-      <nav class="light-bg">
-        <div class="container">
-          <div class="navbar">
-            <img src="@/assets/logo.png" alt="logo" class="logo">
-            <ul class="nav">
-              <li class="nav__item nav__item--has-children">
-                <router-link to="/">Mens</router-link>
-                <div class="content">
-                  <dropdown-nav/>
-                </div>
-                </li>
-              <li class="nav__item nav__item--has-children">
-                <router-link to="/">Womens</router-link>
-                <div class="content">
-                  <dropdown-nav/>
-                </div>
-              </li>
-              <li class="nav__item"><router-link to="/about">The Brand</router-link></li>
-              <li class="nav__item"><router-link to="/">Local Stores</router-link></li>
-              <li class="nav__item nav__item--has-children nav__item--last">
-                <router-link to="/">Look Book</router-link>
-                <div class="content">
-                  <dropdown-nav/>
-                </div>
-              </li>
-            </ul>
-            <div class="search">
-              <input type="text" placeholder="Search..">
-            </div>
+    <nav class="light-bg">
+      <div class="wide-container">
+        <div class="navbar">
+          <router-link to="/" class="logo">
+            <img src="@/assets/images/logo.png" alt="logo" class="logo__image">
+          </router-link>
+          <ul class="nav">
+            <li class="nav__item nav__item--has-children">
+              <router-link to="/">Mens</router-link>
+              <div class="content">
+                <dropdown-nav/>
+              </div>
+            </li>
+            <li class="nav__item nav__item--has-children">
+              <router-link to="/">Womens</router-link>
+              <div class="content">
+                <dropdown-nav/>
+              </div>
+            </li>
+            <li class="nav__item"><router-link to="/about">The Brand</router-link></li>
+            <li class="nav__item"><router-link to="/">Local Stores</router-link></li>
+            <li class="nav__item nav__item--has-children nav__item--last">
+              <router-link to="/">Look Book</router-link>
+              <div class="content">
+                <dropdown-nav/>
+              </div>
+            </li>
+          </ul>
+          <div class="search">
+            <input type="text" placeholder="Search..">
           </div>
         </div>
-      </nav>
+      </div>
+    </nav>
   </header>
 </template>
 
@@ -82,9 +84,7 @@ header {
   font-weight: 700;
 
   .toolbar {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    @include flexbox (flex, flex-end, center);
 
     .nav {
       list-style-type: none;
@@ -106,6 +106,7 @@ header {
         }
       }
     }
+
     .currency {
       margin-right: auto;
 
@@ -151,10 +152,6 @@ header {
         color: $light-accent-color;
       }
 
-      a:hover {
-        color: $dark-accent-color;
-      }
-
       &__icon {
         font-size: 1.2em;
       }
@@ -168,19 +165,29 @@ header {
           padding-left: 10px;
         } 
       }
+
+      &:hover {
+        background: $light-accent-color;
+        color: $dark-accent-color;
+
+        a {
+          color: $dark-accent-color;
+        }
+      }
     }
   }
 
   .navbar {
+    @include flexbox (flex, flex-end, center);
     padding: 30px 0;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
 
     .logo {
       margin-right: auto;
-      width: 150px;
-      margin-left: -200px;
+
+      &__image {
+        width: 150px;
+        padding-top: 6px; 
+      }
     }
 
     .nav {
@@ -235,10 +242,10 @@ header {
         }
       }
     }
+    
     .search {
       display:inline-block;
       position: relative;
-      margin-right: -200px;
 
       &:after {
         font-family: 'FontAwesome';

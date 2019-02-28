@@ -6,9 +6,9 @@
     </site-title>
     <div class="container">
       <div class="about">
-        <img src="@/assets/about1.jpg" alt="woman measuring clothes" class="about__image1">
-        <img src="@/assets/about2.jpg" alt="woman skeching clohtes" class="about__image2">
-        <img src="@/assets/about3.jpg" alt="women looking at fabric" class="about__image3">
+        <img src="@/assets/images/about1.jpg" alt="woman measuring clothes" class="about__image1">
+        <img src="@/assets/images/about2.jpg" alt="woman sketching clothes" class="about__image2">
+        <img src="@/assets/images/about3.jpg" alt="women looking at fabric" class="about__image3">
         <div class="about__textbox1">
           <h3>Hand designed clothing</h3>
           <h4>Established in 2013, AF is a fairly new fashion brand</h4>
@@ -35,9 +35,9 @@
           </p>
         </div>
         <div class="about__awards">
-          <img src="@/assets/bfa-logo.png" alt="british fashion awards" class="awards">
-          <img src="@/assets/ukft-logo.png" alt="british fashion awards" class="awards">
-          <img src="@/assets/drapers-logo.png" alt="british fashion awards" class="awards">
+          <img src="@/assets/images/bfa-logo.png" alt="british fashion awards" class="awards">
+          <img src="@/assets/images/ukft-logo.png" alt="british fashion awards" class="awards">
+          <img src="@/assets/images/drapers-logo.png" alt="british fashion awards" class="awards">
         </div>
       </div>
     </div>
@@ -61,7 +61,7 @@ export default {
   grid-template-columns: 440px 440px;
   grid-template-rows: 20% 20% 20% 20% 20%;
   grid-column-gap: 20px;
-  grid-row-gap: 7px;
+  grid-row-gap: 8px;
   grid-template-areas: 
     "i1 tb1"
     "i1 i2"
@@ -115,7 +115,6 @@ export default {
     } 
   }
 }
-
 </style>
 
 

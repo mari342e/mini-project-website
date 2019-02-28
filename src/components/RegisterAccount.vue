@@ -21,7 +21,7 @@
         <div class="button">
           <button class="btn" type="submit">Create account</button>
           <div class="button__statement">
-            By clicking 'Create Account', you agree to our <a href="#">Privary Police <font-awesome-icon icon="arrow-right" /></a>
+            By clicking 'Create Account', you agree to our <b><a href="#">Privary Police <font-awesome-icon icon="arrow-right" /></a></b>
           </div>
         </div>
       </form>

@@ -3,20 +3,20 @@
     <div class="dropdown__list1">
       <h4>Casuals</h4>
       <ul class="list">
-        <li class="list__item">Jackets</li>
-        <li class="list__item">Hoodies & sweatshirts</li>
-        <li class="list__item">Sportswear</li>
-        <li class="list__item">T-Shirts</li>
-        <li class="list__item">Joggers</li>
+        <li class="list__item"><a href="#">Jackets</a></li>
+        <li class="list__item"><a href="#">Hoodies & sweatshirts</a></li>
+        <li class="list__item"><a href="#">Sportswear</a></li>
+        <li class="list__item"><a href="#">T-Shirts</a></li>
+        <li class="list__item"><a href="#">Joggers</a></li>
       </ul>
     </div>
     <div class="dropdown__list2">
       <h4>Formal</h4>
       <ul class="list">
-        <li class="list__item">Jackets</li>
-        <li class="list__item">Shirts</li>
-        <li class="list__item">Suits</li>
-        <li class="list__item">Trousers</li>
+        <li class="list__item"><a href="#">Jackets</a></li>
+        <li class="list__item"><a href="#">Shirts</a></li>
+        <li class="list__item"><a href="#">Suits</a></li>
+        <li class="list__item"><a href="#">Trousers</a></li>
       </ul>
     </div>
     <div class="dropdown__alert-msg">
@@ -74,6 +74,10 @@
 
     li {
       padding: 5px 0;
+
+      a {
+        text-transform: none;
+      }
     }
   }
 }

@@ -7,7 +7,7 @@
 
 <style lang="scss">
 .cover {
-  background-image: url('../assets/bg-cover.jpg');
+  background-image: url('../assets/images/bg-cover.jpg');
   background-size: cover;
   background-position: center; 
   color: $light-accent-color;

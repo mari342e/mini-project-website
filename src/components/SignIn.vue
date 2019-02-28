@@ -14,7 +14,7 @@
           <div class="button">
             <button class="btn" type="submit">Sign in</button>
             <div class="button__statement">
-              <a href="#">Forgot your password <font-awesome-icon icon="arrow-right" /></a>
+              <b><a href="#">Forgot your password <font-awesome-icon icon="arrow-right" /></a></b>
             </div>
           </div>
         </form>
