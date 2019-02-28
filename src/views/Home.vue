@@ -1,5 +1,11 @@
 <template>
   <main>
+    <div class="hero">
+      <div class="container">
+        <h1>A v e</h1>
+        <button class="btn">Shop men's collection</button>
+      </div>
+    </div>
     <div class="wide-container">
       <div class="products">
         <img src="@/assets/images/item1.jpg" alt="item 1" class="products__item1">
@@ -13,7 +19,7 @@
         <div class="lookbook">
           <img src="@/assets/images/lookbook-male.png" class="lookbook__image">
           <div class="lookbook__content">
-            <h2 class="lb-title"><b>Men's</b><br> Lookbook</h2>
+            <h2><b>Men's</b><br> Lookbook</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
             </p>
@@ -23,7 +29,7 @@
         <div class="lookbook">
           <img src="@/assets/images/lookbook-female.png" class="lookbook__image">
           <div class="lookbook__content">
-            <h2 class="lb-title"><b>Women's</b><br> lookbook</h2>
+            <h2><b>Women's</b><br> lookbook</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
             </p>
@@ -33,7 +39,7 @@
         <div class="lookbook">
           <img src="@/assets/images/lookbook-anon.png" class="lookbook__image">
           <div class="lookbook__content">
-            <h2 class="lb-title"><b>Your</b><br> lookbook</h2>
+            <h2><b>Your</b><br> lookbook</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
             </p>
@@ -52,6 +58,30 @@ export default {
 </script>
 
 <style lang="scss">
+.hero {
+  background: $light-bg-color;
+  background-image: url('../assets/images/bg-hero.jpg');
+  background-size: contain;
+  background-position: center; 
+  background-repeat: no-repeat;
+  height: 500px;
+  margin-top: -91px;
+  @include flexbox (center, center, row);
+
+  .container {
+    @include flexbox (space-evenly, center, column);
+    height: 400px;
+
+    h1 {
+      color: $dark-accent-color;
+      font-size: 15em;
+      line-height: 1;
+      text-align: center;
+      font-weight: 700;
+      opacity: 0.7;
+    }
+  }
+}
 .products {
   padding: 40px 0;
   margin: 0 0 40px;
@@ -120,14 +150,13 @@ export default {
       width: 200px;
       text-align: right;
 
-      .lb-title {
+      h2 {
         color: $dark-accent-color;
         line-height: 1.2;
         font-size: 2em;
       }
 
       .btn {
-        width: 150px;
         margin: 10px 0 0 0;
       }
     }
