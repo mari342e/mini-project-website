@@ -9,6 +9,38 @@
         <img src="@/assets/images/item5.jpg" alt="item 5" class="products__item5">
         <img src="@/assets/images/item6.jpg" alt="item 6" class="products__item6">
       </div>
+      <div class="lookbooks">
+        <div class="lookbook">
+          <img src="@/assets/images/lookbook-male.png" class="lookbook__image">
+          <div class="lookbook__content">
+            <h2 class="lb-title"><b>Men's</b><br> Lookbook</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+            </p>
+            <button class="btn">View now</button>
+          </div>
+        </div>
+        <div class="lookbook">
+          <img src="@/assets/images/lookbook-female.png" class="lookbook__image">
+          <div class="lookbook__content">
+            <h2 class="lb-title"><b>Women's</b><br> lookbook</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+            </p>
+            <button class="btn">View now</button>
+          </div>
+        </div>
+        <div class="lookbook">
+          <img src="@/assets/images/lookbook-anon.png" class="lookbook__image">
+          <div class="lookbook__content">
+            <h2 class="lb-title"><b>Your</b><br> lookbook</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+            </p>
+            <button class="btn">View now</button>
+          </div>
+        </div>
+      </div>
     </div>
   </main>
 </template>
@@ -22,7 +54,8 @@ export default {
 <style lang="scss">
 .products {
   padding: 40px 0;
-  margin-bottom: 40px;
+  margin: 0 0 40px;
+  border-bottom: 1px solid $light-accent-color; 
   display: grid;
   grid-template-columns: 310px 310px 310px 310px;
   grid-template-rows: 166px 166px 166px 166px 166px;
@@ -65,6 +98,39 @@ export default {
 
   &__item6 {
     grid-area: i6;
+  }
+}
+
+.lookbooks {
+  @include flexbox (space-between, center, row);
+  padding-bottom: 40px;
+
+  .lookbook {
+    @include flexbox (space-between, center, row);
+    background: $light-bg-color;
+    width: 420px;
+    padding: 0 20px;
+
+    &__image {
+      width: 180px;
+    }
+
+    &__content {
+      @include flexbox (space-around, flex-end, column);
+      width: 200px;
+      text-align: right;
+
+      .lb-title {
+        color: $dark-accent-color;
+        line-height: 1.2;
+        font-size: 2em;
+      }
+
+      .btn {
+        width: 150px;
+        margin: 10px 0 0 0;
+      }
+    }
   }
 }
 </style>
