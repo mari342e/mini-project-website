@@ -25,7 +25,7 @@ export default {
   margin-bottom: 40px;
   display: grid;
   grid-template-columns: 310px 310px 310px 310px;
-  grid-template-rows: 20% 20% 20% 20% 20%;
+  grid-template-rows: 166px 166px 166px 166px 166px;
   grid-column-gap: 20px;
   grid-row-gap: 20px;
   grid-template-areas: 
@@ -36,11 +36,11 @@ export default {
     "i4 i4 i5 i6";
 
   &__item1, &__item2, &__item5, &__item6 {
-    width: 310px;
+    width: 100%;
   }
 
   &__item3, &__item4 {
-    width: 640px;
+    width: 100%;
   }
 
   &__item1 {
