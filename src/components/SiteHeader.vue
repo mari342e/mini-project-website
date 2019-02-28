@@ -1,6 +1,6 @@
 <template>
   <header>
-    <div class="dark-bg">
+    <div class="dark">
       <div class="container">
         <div class="toolbar">
           <div class="currency">
@@ -15,7 +15,7 @@
             <li class="nav__item"><router-link to="/signin-register">Register</router-link></li>
             <li class="nav__item nav__item--last"><router-link to="/signin-register">Sign In</router-link></li>
           </ul>
-          <div class="cart">
+          <div class="cart accent">
             <div class="cart__icon">
               <font-awesome-icon icon="shopping-cart" />
             </div>
@@ -26,7 +26,7 @@
         </div>
       </div>
     </div>
-    <nav class="light-bg">
+    <nav class="light">
       <div class="wide-container">
         <div class="navbar">
           <router-link to="/" class="logo">
@@ -80,14 +80,15 @@ export default {
 
 <style lang="scss">
 header {
-  font-family: 'Montserrat', sans-serif;
+  font-family: $accent-font;
   font-weight: 700;
 
   .toolbar {
-    @include flexbox (flex, flex-end, center);
+    @include flexbox (flex-end, center, row);
+    color: $text-color;
 
     .nav {
-      list-style-type: none;
+      @include reset-list-style ();
 
       &__item {
         display: inline;
@@ -123,8 +124,9 @@ header {
           background: transparent;
           -webkit-appearance: none;
           color: $text-color;
-          font-family: 'Montserrat', sans-serif;
+          font-family: $accent-font;
           font-weight: 700;
+          font-size: 1em;
 
           &:focus {
             outline: none; 
@@ -140,11 +142,7 @@ header {
     }
 
     .cart {
-      background: $accent-color;
-      color: $light-accent-color;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      @include flexbox (space-between, center, row);
       padding: 10px 20px;
       width: 150px;
 
@@ -167,7 +165,6 @@ header {
       }
 
       &:hover {
-        background: $light-accent-color;
         color: $dark-accent-color;
 
         a {
@@ -178,7 +175,7 @@ header {
   }
 
   .navbar {
-    @include flexbox (flex, flex-end, center);
+    @include flexbox (flex-end, center, row);
     padding: 30px 0;
 
     .logo {
@@ -191,8 +188,7 @@ header {
     }
 
     .nav {
-      list-style-type: none;
-      padding: 0;
+      @include reset-list-style ();
 
       &__item {
         display: inline;
@@ -200,7 +196,7 @@ header {
         font-weight: 700;
         position: relative;
 
-        a {
+      > a {
           color: $dark-accent-color;
           text-transform: uppercase;
         }
@@ -256,7 +252,7 @@ header {
       }
       
       input[type=text] {
-        font-family: 'Montserrat', sans-serif;
+        font-family: $accent-font;
         border: 1px solid $input-border;
         color: $text-color;
         background: $light-bg-color;

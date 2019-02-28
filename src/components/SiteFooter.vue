@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <div class="light-bg">
+    <div class="light">
       <div class="container">
         <div class="footer">
           <div class="footer__lists">
@@ -60,13 +60,13 @@
             </div>
           </div>
           <div class="footer__blocks">
-            <div class="block block--dark">
+            <div class="block dark">
               <p class="award">
                 <b>Award winner</b><br>
                 Fashion awards 2016
               </p>
             </div>
-            <div class="block block--accent">
+            <div class="block accent">
               <ul class="social-links">
                 <li><a href="#"><font-awesome-icon :icon="['fab', 'facebook-f']" /></a></li>
                 <li><a href="#"><font-awesome-icon :icon="['fab', 'twitter']" /></a></li>
@@ -78,7 +78,7 @@
         </div>
       </div>
     </div>
-    <div class="dark-bg">
+    <div class="dark">
       <p class="copyright">
         © 2019 Avenue Fashion™ 
       </p>
@@ -99,80 +99,77 @@ export default {
 <style lang="scss">
 footer {
   .footer {
+    @include flexbox (space-between, inherit, column);
     padding: 40px 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+
     &__lists {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
+      @include flexbox (space-between, flex-start, row);
+
       .list {
         &__title {
           padding-bottom: 20px;
         }
+
         &__items {
-          list-style-type: none;
+          @include reset-list-style ();
           display: inline;
-          padding: 0;
+
           a {
             color: $text-color;
           }
+
           a:hover {
             color: $accent-color;
           }
+
           li {
             padding: 5px 0;
           }
         }
       }
     }
+
     &__blocks {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      @include flexbox (space-between, center, row);
       padding: 30px 0 0;
+
       .block {
+        @include flexbox (center, center, row);
         width: 440px;
         height: 150px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        &--dark {
-          background: $dark-bg-color;
-          color: $light-accent-color;
-        }
-        &--accent {
-          background: $accent-color;
-          color: $light-accent-color;
-        }
+
         .social-links {
-          list-style-type: none;
-          padding: 0;
+          @include reset-list-style ();
           font-size: 2em;
+
           li {
             display: inline;
             padding: 0 20px;
+
             a {
               color: $light-accent-color;
               text-decoration: none;
             }
+
             a:hover {
               color: $dark-accent-color;
             }
           }
         }
+
         .award {
           font-size: 2em;
           text-transform: uppercase;
           text-align: center;
-          font-family: 'Montserrat', sans-serif;
+          font-family: $accent-font;
         }
       }
     }
   }
+  
   .copyright {
     text-align: center;
+    color: $text-color;
     padding: 12px 0;
     font-weight: 700;
   }

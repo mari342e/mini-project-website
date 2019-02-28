@@ -9,7 +9,7 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: $body-font;
   color: $text-color;
   font-size: 1em;
   font-size: 13px;
@@ -48,7 +48,7 @@ h3 {
 }
 
 h4 {
-  @include heading (1em, 700, $dark-accent-color);
+  @include heading (1em, 700, $text-color);
   padding-bottom: 0px;
 }
 
@@ -62,24 +62,24 @@ h4 {
   margin: 0 auto;
 }
 
-.light-bg {
+.light {
   background: $light-bg-color;
   color: $text-color;
 }
 
-.dark-bg {
+.dark {
   background: $dark-bg-color;
-  color: $text-color;
+  color: $light-accent-color;
 }
 
-.accent-bg {
+.accent {
   background: $accent-color;
   color: $light-accent-color;
 }
 
 .btn {
   color: $text-color;
-  font-family: 'Montserrat', sans-serif;
+  font-family: $accent-font;
   font-weight: 700;
   font-size: 1em;
   text-align: center;

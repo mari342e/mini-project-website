@@ -1,13 +1,19 @@
 @mixin heading ($h-size, $h-weight, $h-color) {
-  font-family: 'Montserrat', sans-serif;
+  font-family: $accent-font;
   font-size: $h-size;
   font-weight: $h-weight;
   color: $h-color;
   text-transform: uppercase;
 }
 
-@mixin flexbox ($display, $j-content, $a-items) {
-  display: $display;
+@mixin flexbox ($j-content, $a-items, $direction) {
+  display: flex;
   justify-content: $j-content;
   align-items: $a-items;
+  flex-direction: $direction;
+}
+
+@mixin reset-list-style () {
+  list-style-type: none;
+  padding: 0;
 }

@@ -17,6 +17,7 @@
 import SiteTitle from "@/components/SiteTitle";
 import RegisterAccount from "@/components/RegisterAccount";
 import SignIn from "@/components/SignIn";
+
 export default {
   components: {
     SiteTitle,
@@ -28,9 +29,7 @@ export default {
 
 <style lang="scss">
 .forms {
-  display: flex;
-  justify-content: space-between;
-  align-content: flex-start;
+  @include flexbox (space-between, flex-start, row);
   padding: 40px 0;
 
   &__item {
@@ -38,7 +37,7 @@ export default {
     padding: 0 20px 0 0;
 
     &--last {
-      border-left: 1px solid $light-accent-color;
+      border-left: 1px solid $input-border;
       padding: 0 0 0 20px;
     }
   }
@@ -46,8 +45,8 @@ export default {
   input {
     color: $text-color;
     font-size: 1em;
-    font-family: 'Montserrat', sans-serif;
-    border: 1px $light-accent-color solid;
+    font-family: $accent-font;
+    border: 1px $input-border solid;
     border-radius: 0;
     -webkit-appearance: none;
     padding: 5px 10px;
@@ -62,9 +61,7 @@ export default {
   }
 
   .checkbox {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    @include flexbox (flex-start, center, row);
     margin: 30px 0 0 ;
 
     input[type=checkbox]{
@@ -85,9 +82,7 @@ export default {
   }
 
   .button {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flexbox (space-between, center, row);
     margin-top: 30px;
 
     &__statement {

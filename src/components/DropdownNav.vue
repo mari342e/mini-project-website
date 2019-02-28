@@ -19,7 +19,7 @@
         <li class="list__item"><a href="#">Trousers</a></li>
       </ul>
     </div>
-    <div class="dropdown__alert-msg">
+    <div class="dropdown__alert-msg dark">
       <p>
         <b>Autumn sale!</b><br>
         Up to 50% off
@@ -48,18 +48,14 @@
   }
 
   &__alert-msg {
+    @include flexbox (center, center, row);
     grid-area: am;
     font-size: 2em;
     text-transform: uppercase;
     text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    background: $dark-bg-color;
-    color: $light-accent-color;
+    font-weight: 400;
     width: 350px;
     height: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 
   h4 {
@@ -76,6 +72,7 @@
       padding: 5px 0;
 
       a {
+        color: $text-color;
         text-transform: none;
       }
     }

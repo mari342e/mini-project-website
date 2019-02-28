@@ -46,6 +46,7 @@
 
 <script>
 import SiteTitle from "@/components/SiteTitle";
+
 export default {
   components: {
     SiteTitle
@@ -71,6 +72,7 @@ export default {
 
   &__textbox1, &__textbox2, &__textbox3 {
     width: 440px;
+
     p {
       padding: 5px 0 0;
     }
@@ -106,9 +108,7 @@ export default {
 
   &__awards {
     grid-area: a;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    @include flexbox (space-around, center, row); 
 
     .awards {
       height: 80px;
