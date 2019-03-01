@@ -8,12 +8,66 @@
     </div>
     <div class="wide-container">
       <div class="products">
-        <img src="@/assets/images/item1.jpg" alt="item 1" class="products__item1">
-        <img src="@/assets/images/item2.jpg" alt="item 2" class="products__item2">
-        <img src="@/assets/images/item3.jpg" alt="item 3" class="products__item3">
-        <img src="@/assets/images/item4.jpg" alt="item 4" class="products__item4">
-        <img src="@/assets/images/item5.jpg" alt="item 5" class="products__item5">
-        <img src="@/assets/images/item6.jpg" alt="item 6" class="products__item6">
+        <router-link to="/product" class="products__item1 products--hover"><img :src="product1.image" alt="item 1">
+          <div class="price">
+            <h4><font-awesome-icon icon="pound-sign" /> <span class="price--before">{{ product1.price }}</span> {{ product1.salePrice }}</h4>
+          </div>
+          <div class="info">
+            <h4>{{ product1.name }}</h4>
+            <button class="add-btn"><font-awesome-icon icon="shopping-cart" /></button>
+            <button class="add-btn"><font-awesome-icon icon="heart" /></button>
+          </div>
+        </router-link>
+        <router-link to="/product" class="products__item2 products--hover"><img :src="product2.image" alt="item 2">
+          <div class="price">
+            <h4><font-awesome-icon icon="pound-sign" /> {{ product2.price }}</h4>
+          </div>
+          <div class="info">
+            <h4>{{ product2.name }}</h4>
+            <button class="add-btn"><font-awesome-icon icon="shopping-cart" /></button>
+            <button class="add-btn"><font-awesome-icon icon="heart" /></button>
+          </div>
+        </router-link>
+        <router-link to="/product" class="products__item3 products--hover"><img :src="product3.image" alt="item 3">
+          <div class="price">
+            <h4><font-awesome-icon icon="pound-sign" /> {{ product3.price }}</h4>
+          </div>
+          <div class="info">
+            <h4>{{ product3.name }}</h4>
+            <button class="add-btn"><font-awesome-icon icon="shopping-cart" /></button>
+            <button class="add-btn"><font-awesome-icon icon="heart" /></button>
+          </div>
+        </router-link>
+        <router-link to="/product" class="products__item4 products--hover"><img :src="product4.image" alt="item 4">
+          <div class="price">
+            <h4><font-awesome-icon icon="pound-sign" /> <span class="price--before">{{ product4.price }}</span> {{ product4.salePrice }}</h4>
+          </div>
+          <div class="info">
+            <h4>{{ product4.name }}</h4>
+            <button class="add-btn"><font-awesome-icon icon="shopping-cart" /></button>
+            <button class="add-btn"><font-awesome-icon icon="heart" /></button>
+          </div>
+        </router-link>
+        <router-link to="/product" class="products__item5 products--hover"><img :src="product5.image" alt="item 5">
+          <div class="price">
+            <h4><font-awesome-icon icon="pound-sign" /> {{ product5.price }}</h4>
+          </div>
+          <div class="info">
+            <h4>{{ product5.name }}</h4>
+            <button class="add-btn"><font-awesome-icon icon="shopping-cart" /></button>
+            <button class="add-btn"><font-awesome-icon icon="heart" /></button>
+          </div>
+        </router-link>
+        <router-link to="/product" class="products__item6 products--hover"><img :src="product6.image" alt="item 6">
+          <div class="price">
+            <h4><font-awesome-icon icon="pound-sign" /> {{ product6.price }}</h4>
+          </div>
+          <div class="info">
+            <h4>{{ product6.name }}</h4>
+            <button class="add-btn"><font-awesome-icon icon="shopping-cart" /></button>
+            <button class="add-btn"><font-awesome-icon icon="heart" /></button>
+          </div>
+        </router-link>
       </div>
       <div class="lookbooks">
         <div class="lookbook">
@@ -53,7 +107,42 @@
 
 <script>
 export default {
-
+  data() {
+    return {
+      product1: {
+        name: 'Ave classic sweatshirt',
+        image: require('@/assets/images/item1.jpg'),
+        price: 107,
+        salePrice: 89.99  
+      }, 
+      product2: {
+        name: 'Ave white classic tee',
+        image: require('@/assets/images/item2.jpg'),
+        price: 49
+      }, 
+      product3: {
+        name: 'Ave casual knit',
+        image: require('@/assets/images/item3.jpg'),
+        price: 89.99 
+      }, 
+      product4: {
+        name: 'Ave long-sleeved tee',
+        image: require('@/assets/images/item4.jpg'),
+        price: 69.95, 
+        salePrice: 50 
+      }, 
+      product5: {
+        name: 'Ave burnt orange casual tee',
+        image: require('@/assets/images/item5.jpg'),
+        price: 29.95 
+      }, 
+      product6: {
+        name: 'Ave black classic tee',
+        image: require('@/assets/images/item6.jpg'),
+        price: 35  
+      }, 
+    }
+  }
 }
 </script>
 
@@ -82,6 +171,7 @@ export default {
     }
   }
 }
+
 .products {
   padding: 40px 0;
   margin: 0 0 40px;
@@ -99,11 +189,19 @@ export default {
     "i4 i4 i5 i6";
 
   &__item1, &__item2, &__item5, &__item6 {
-    width: 100%;
+    width: 310px;
+    
+    img {
+      width: 100%;
+    }
   }
 
   &__item3, &__item4 {
-    width: 100%;
+    width: 640px;
+
+    img {
+      width: 100%;
+    }
   }
 
   &__item1 {
@@ -128,6 +226,54 @@ export default {
 
   &__item6 {
     grid-area: i6;
+  }
+
+  &--hover {
+    .info, .price {
+      display: none;
+    }
+
+    &:hover {
+      box-shadow: 0px 0px 10px 0px rgba(140,140,140,0.2);
+      position: relative;
+      
+      .info {
+        display: inline-block;
+        background: white;
+        text-align: center;
+        padding: 20px;
+        width: 100%;
+        margin-top: -6px;
+        box-shadow: 0px 0px 10px 0px rgba(140,140,140,0.2);
+      }
+
+      .price {
+        display: inline;
+        position: absolute;
+        top: 5px;
+        left: 10px;
+
+        &--before {
+          text-decoration: line-through;
+          padding-left: 5px;
+        }
+      }
+
+      .add-btn {
+        height: 30px;
+        width: 30px;
+        border-radius: 15px;
+        border: 0;
+        background: $dark-accent-color;
+        color: $light-accent-color;
+        margin: 10px 5px 0; 
+
+        &:hover {
+          background: $accent-color;
+          cursor: pointer;
+        }
+      }
+    }
   }
 }
 
