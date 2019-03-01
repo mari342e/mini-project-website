@@ -11,20 +11,22 @@
         </div>
         <div class="product__info">
           <h3>{{ product }}</h3>
-          <div class="prices">
-            <div class="prices__price prices__price--before">
+          <div class="price">
+            <div class="price__item price__item--before">
               {{ price }}
             </div>
-            <div class="prices__price">
+            <div class="price__item">
               {{ salePrice }}
             </div>
           </div>
           <p>
             <span class="stats">Availabilty:</span> 
             <span v-if="inStock">In Stock</span>
-            <span v-else>Out of Stock</span><br>
+            <span v-else>Out of Stock</span>
+            <br>
             <span class="stats">Product code:</span> 
-            #{{ id }}<br>
+            #{{ id }}
+            <br>
             <span class="stats">Tags:</span> 
             <a href v-for="tag in tags" :key="tag" class="tag">{{ tag }}</a>
           </p>
@@ -147,10 +149,10 @@ export default {
     width: 440px;
     height: 500px;
 
-    .prices {
+    .price {
       font-size: 1.5em;
 
-      &__price {
+      &__item {
         display: inline;
         padding-right: 20px;
 
@@ -257,6 +259,5 @@ export default {
     padding: 15px 0;
   }
 }
-
 </style>
 
