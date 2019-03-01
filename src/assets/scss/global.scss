@@ -96,4 +96,8 @@ h4 {
     border: 2px solid $accent-color;
     cursor: pointer;
   }
+
+  &:focus {
+      outline: none;
+  }
 }

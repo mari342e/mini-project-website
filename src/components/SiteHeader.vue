@@ -203,6 +203,7 @@ header {
 
         a:hover {
           color: $accent-color;
+          text-decoration: none;
         }
 
         &--last {
