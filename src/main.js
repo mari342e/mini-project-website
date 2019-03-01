@@ -6,6 +6,7 @@ import { faShoppingCart, faAngleDown, faArrowRight } from '@fortawesome/free-sol
 import { faFacebookF, faInstagram, faTwitter, faPinterest } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import VeeValidate from 'vee-validate'
+import './registerServiceWorker'
 
 library.add(faShoppingCart, faAngleDown, faArrowRight, faFacebookF, faInstagram, faTwitter, faPinterest)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
