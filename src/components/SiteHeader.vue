@@ -61,6 +61,7 @@
             <label for="toggle-menu" class="hamburger-off"><font-awesome-icon icon="times" /></label>
         
             <ul class="hamburger-nav">
+              <li class="nav-item"><router-link to="/">Home</router-link></li>
               <li class="nav-item"><router-link to="/">Mens</router-link></li>
               <li class="nav-item"><router-link to="/">Womens</router-link></li>
               <li class="nav-item"><router-link to="/about">The Brand</router-link></li>
@@ -96,6 +97,7 @@ export default {
 header {
   font-family: $accent-font;
   font-weight: 700;
+  width: 100%;
 
   .toolbar {
     @include flexbox (flex-end, center, row);
@@ -343,14 +345,14 @@ header {
         display: none;
         width: 100%;
         background: white;
-        padding: 10px 0;
+        padding: 15px 0;
       }
 
       .hamburger-nav li.nav-item a {
         display: block;
         color: $dark-accent-color;
         text-align: center;
-        padding: 5px 0;
+        padding: 8px 0;
         font-size: 1em;
         text-transform: uppercase;
         font-family: $accent-font;
@@ -360,6 +362,11 @@ header {
         color: $accent-color;
       }
     }
+  }
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    position: fixed;
+    margin-top: -118px;
   }
 }
 </style>

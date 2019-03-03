@@ -111,3 +111,9 @@ h4 {
       outline: none;
   }
 }
+
+main {
+  @media screen and (max-width: $breakpoint-mobile) {
+    margin-top: 118px;
+  }
+}
