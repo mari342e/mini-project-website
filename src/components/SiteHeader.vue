@@ -55,8 +55,18 @@
             </li>
           </ul>
           <!-- mobile navigation -->
-          <div class="nav-mobile">
-            <font-awesome-icon icon="bars" />
+          <div class="hamburger-navigation">
+            <input id="toggle-menu" type="checkbox"/>
+            <label for="toggle-menu" class="hamburger-on"><font-awesome-icon icon="bars" /></label>
+            <label for="toggle-menu" class="hamburger-off"><font-awesome-icon icon="times" /></label>
+        
+            <ul class="hamburger-nav">
+              <li class="nav-item"><router-link to="/">Mens</router-link></li>
+              <li class="nav-item"><router-link to="/">Womens</router-link></li>
+              <li class="nav-item"><router-link to="/about">The Brand</router-link></li>
+              <li class="nav-item"><router-link to="/">Local Stores</router-link></li>
+              <li class="nav-item"><router-link to="/">Look Book</router-link></li>
+            </ul>
           </div>
           <!-- end of mobile navigation -->
           <div class="search">
@@ -70,7 +80,6 @@
 
 <script>
 import DropdownNav from "@/components/DropdownNav";
-
 export default {
   data() {
     return {
@@ -268,14 +277,6 @@ header {
         display: none;
       }
     }
-
-    .nav-mobile {
-      display: none;
-
-      @media screen and (max-width: $breakpoint-mobile) {
-        display: block;
-      }
-    }
     
     .search {
       display:inline-block;
@@ -303,8 +304,61 @@ header {
       }
     }
 
+    .hamburger-navigation {
+      display: none;
+    }
+
     @media screen and (max-width: $breakpoint-mobile) {
       padding: 20px;
+
+      .hamburger-navigation {
+        display: block;
+        z-index: 101;
+        width: 100%;
+        height: 71px;
+        position: fixed;
+      }
+
+      .hamburger-on, .hamburger-off  {
+        padding: 5px;
+        position: fixed;
+        right: 20px;
+        top: 60px;
+        font-size: 1.5em;
+      }
+
+      .hamburger-on, #toggle-menu:checked ~ .hamburger-nav, #toggle-menu:checked ~ .hamburger-off {
+        display: block;
+      }
+
+      .hamburger-off, #toggle-menu, #toggle-menu:checked ~ .hamburger-on {
+        display: none;
+      }
+
+      .hamburger-nav {
+        position: fixed;
+        list-style-type: none;
+        top: 118px;
+        right: 0;
+        display: none;
+        width: 100%;
+        background: white;
+        padding: 10px 0;
+      }
+
+      .hamburger-nav li.nav-item a {
+        display: block;
+        color: $dark-accent-color;
+        text-align: center;
+        padding: 5px 0;
+        font-size: 1em;
+        text-transform: uppercase;
+        font-family: $accent-font;
+      }
+
+      .hamburger-nav li a:hover {
+        color: $accent-color;
+      }
     }
   }
 }
