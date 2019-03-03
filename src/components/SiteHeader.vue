@@ -54,6 +54,11 @@
               </div>
             </li>
           </ul>
+          <!-- mobile navigation -->
+          <div class="nav-mobile">
+            <font-awesome-icon icon="bars" />
+          </div>
+          <!-- end of mobile navigation -->
           <div class="search">
             <input type="text" placeholder="Search..">
           </div>
@@ -104,6 +109,10 @@ header {
 
         &--last {
           padding-right: 50px;
+
+          @media screen and (max-width: $breakpoint-mobile) {
+            padding-right: 20px;
+          }
         }
       }
     }
@@ -139,6 +148,14 @@ header {
           padding-right: 10px;
         }    
       }
+
+      @media screen and (max-width: $breakpoint-mobile) {
+        padding-left: 10px;
+
+        label {
+          display: none;
+        }
+      }
     }
 
     .cart {
@@ -162,6 +179,10 @@ header {
           content: '\f107';
           padding-left: 10px;
         } 
+
+        @media screen and (max-width: $breakpoint-mobile) {
+          display: none;
+        }
       }
 
       &:hover {
@@ -170,6 +191,10 @@ header {
         a {
           color: $dark-accent-color;
         }
+      }
+
+      @media screen and (max-width: $breakpoint-mobile) {
+        width: auto;
       }
     }
   }
@@ -196,7 +221,7 @@ header {
         font-weight: 700;
         position: relative;
 
-      > a {
+        > a {
           color: $dark-accent-color;
           text-transform: uppercase;
         }
@@ -238,6 +263,18 @@ header {
           }
         }
       }
+
+      @media screen and (max-width: $breakpoint-mobile) {
+        display: none;
+      }
+    }
+
+    .nav-mobile {
+      display: none;
+
+      @media screen and (max-width: $breakpoint-mobile) {
+        display: block;
+      }
     }
     
     .search {
@@ -260,6 +297,14 @@ header {
         padding: 7px 10px;
         width: 150px;
       }
+
+      @media screen and (max-width: $breakpoint-mobile) {
+        display: none;
+      }
+    }
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      padding: 20px;
     }
   }
 }

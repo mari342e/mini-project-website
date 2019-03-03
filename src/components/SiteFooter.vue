@@ -127,6 +127,10 @@ footer {
           }
         }
       }
+
+      @media screen and (max-width: $breakpoint-mobile) {
+        display: none;
+      }
     }
 
     &__blocks {
@@ -163,7 +167,21 @@ footer {
           text-align: center;
           font-family: $accent-font;
         }
+
+        @media screen and (max-width: $breakpoint-mobile) {
+          width: 100%;
+          margin-bottom: 6px;
+        }
       }
+
+      @media screen and (max-width: $breakpoint-mobile) {
+        display: block;
+        padding: 0;
+      }
+    }
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      padding: 0;
     }
   }
   
@@ -172,6 +190,12 @@ footer {
     color: $text-color;
     padding: 12px 0;
     font-weight: 700;
+  }
+  
+  @media screen and (max-width: $breakpoint-mobile) {
+    .light {
+      background: white;
+    }
   }
 }
 </style>

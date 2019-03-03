@@ -170,6 +170,10 @@ export default {
       opacity: 0.7;
     }
   }
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    display: none;
+  }
 }
 
 .products {
@@ -194,12 +198,20 @@ export default {
     img {
       width: 100%;
     }
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      width: 100%;
+    }
   }
 
   &__item3, &__item4 {
     width: 640px;
 
     img {
+      width: 100%;
+    }
+
+    @media screen and (max-width: $breakpoint-mobile) {
       width: 100%;
     }
   }
@@ -245,6 +257,10 @@ export default {
         width: 100%;
         margin-top: -6px;
         box-shadow: 0px 0px 10px 0px rgba(140,140,140,0.2);
+
+        @media screen and (max-width: $breakpoint-mobile) {
+          display: none;
+        }
       }
 
       .price {
@@ -256,6 +272,10 @@ export default {
         &--before {
           text-decoration: line-through;
           padding-left: 5px;
+        }
+
+        @media screen and (max-width: $breakpoint-mobile) {
+          display: none;
         }
       }
 
@@ -273,7 +293,17 @@ export default {
           cursor: pointer;
         }
       }
+
+      @media screen and (max-width: $breakpoint-mobile) {
+        box-shadow: none;
+      }
     }
+  }
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    display: block;
+    margin: 0;
+    border-bottom: 0; 
   }
 }
 
@@ -289,6 +319,10 @@ export default {
 
     &__image {
       width: 180px;
+
+      @media screen and (max-width: $breakpoint-mobile) {
+        width: 40%;
+      }
     }
 
     &__content {
@@ -305,7 +339,24 @@ export default {
       .btn {
         margin: 10px 0 0 0;
       }
+
+      @media screen and (max-width: $breakpoint-mobile) {
+        width: 60%;
+
+        p {
+          display: none;
+        }
+      }
     }
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      width: 100%;
+      margin-bottom: 6px;
+    }
+  }
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    display: block;
   }
 }
 </style>

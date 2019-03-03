@@ -45,21 +45,31 @@ h2 {
 h3 {
   @include heading (1.2em, 700, $dark-accent-color); 
   padding-bottom: 0px;
+  text-align: left;
 }
 
 h4 {
   @include heading (1em, 700, $text-color);
   padding-bottom: 0px;
+  text-align: left;
 }
 
 .container {
   width: 900px;
   margin: 0 auto;
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    width: 100%;
+  } 
 }
 
 .wide-container {
   width: 1300px;
   margin: 0 auto;
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    width: 100%;
+  }
 }
 
 .light {

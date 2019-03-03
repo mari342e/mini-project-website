@@ -7,8 +7,6 @@
     <div class="container">
       <div class="about">
         <img src="@/assets/images/about1.jpg" alt="woman measuring clothes" class="about__image1">
-        <img src="@/assets/images/about2.jpg" alt="woman sketching clothes" class="about__image2">
-        <img src="@/assets/images/about3.jpg" alt="women looking at fabric" class="about__image3">
         <div class="about__textbox1">
           <h3>Hand designed clothing</h3>
           <h4>Established in 2013, AF is a fairly new fashion brand</h4>
@@ -17,6 +15,7 @@
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Sed ut perspiciatis unde omnis.
           </p>
         </div>
+        <img src="@/assets/images/about2.jpg" alt="woman sketching clothes" class="about__image2">
         <div class="about__textbox2">
           <h3>Our values, vision and strategy</h3>
           <h4>Lorem ipsum dolor sit amet</h4>
@@ -25,6 +24,7 @@
             ad minim veniam. Sed ut perspiciatis unde omnis. Et harum quidem rerum facilis est et expedita distinctio. Itaque earum rerum.
           </p>
         </div>
+        <img src="@/assets/images/about3.jpg" alt="women looking at fabric" class="about__image3">
         <div class="about__textbox3">
           <h3>Ethical trading</h3>
           <h4>Lorem ipsum dolor sit amet</h4>
@@ -75,6 +75,12 @@ export default {
     p {
       padding: 5px 0 0;
     }
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      width: 100%;
+      margin-bottom: 40px;
+      padding: 0 20px;
+    }
   }
 
   &__textbox1 {
@@ -91,6 +97,11 @@ export default {
 
   &__image1, &__image2, &__image3 {
     width: 440px;
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      width: 100%;
+      margin-bottom: 6px;
+    }
   }
 
   &__image1 {
@@ -111,7 +122,21 @@ export default {
 
     .awards {
       height: 80px;
-    } 
+
+      @media screen and (max-width: $breakpoint-mobile) {
+        width: 25%;
+        height: auto;
+      }
+    }
+    
+    @media screen and (max-width: $breakpoint-mobile) {
+      padding: 0 20px 20px;
+      justify-content: space-between;
+    }
+  }
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    display: block;
   }
 }
 </style>

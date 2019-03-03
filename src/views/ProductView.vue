@@ -142,6 +142,14 @@ export default {
 
   &__image {
     width: 440px;
+
+    img {
+      width: 100%;
+    }
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      width: 100%;
+    }
   }
 
   &__info {
@@ -214,9 +222,31 @@ export default {
             &:focus {
               outline: none; 
             }
-          }   
+
+            @media screen and (max-width: $breakpoint-mobile) {
+              width: 100%;
+              margin-bottom: 5px;
+            }
+          }  
+        }
+
+        @media screen and (max-width: $breakpoint-mobile) {
+          h4 {
+            padding: 5px 0 0;
+          }
         }
       }
+
+      @media screen and (max-width: $breakpoint-mobile) {
+        display: block;
+      }
+    }
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      display: block;
+      width: 100%;
+      height: auto;
+      padding: 20px 20px 0;
     }
   }
 
@@ -233,7 +263,24 @@ export default {
         border: 2px solid $dark-accent-color;
         cursor: pointer;
       }
+
+      @media screen and (max-width: $breakpoint-mobile) {
+        width: 100%;
+        margin-bottom: 20px;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
     }
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      display: block;
+    }
+  }
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    display: block;
   }
 }
 
@@ -247,16 +294,28 @@ export default {
     .tab {
       display: inline;
       padding: 15px 20px;
+
+      @media screen and (max-width: $breakpoint-mobile) {
+        display: block;
+      }
     }
 
     .activeTab {
       background: $dark-accent-color;
       color: $light-accent-color;
     }
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      padding: 0;
+    }
   }
 
   &__content {
     padding: 15px 0;
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      padding: 15px 20px 0;
+    }
   }
 }
 </style>

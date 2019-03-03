@@ -12,5 +12,13 @@
   background-position: center; 
   height: 350px;
   @include flexbox (center, center, column);
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    height: 150px;
+    
+    h2 {
+      display: none;
+    }
+  }
 }
 </style>

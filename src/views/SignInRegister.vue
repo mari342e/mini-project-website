@@ -36,9 +36,23 @@ export default {
     width: 450px;
     padding: 0 20px 0 0;
 
+    @media screen and (max-width: $breakpoint-mobile) {
+      padding: 0;
+    }
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      width: 100%;
+    }
+
     &--last {
       border-left: 1px solid $input-border;
       padding: 0 0 0 20px;
+
+      @media screen and (max-width: $breakpoint-mobile) {
+        border: 0;
+        padding: 0;
+        margin-top: 40px;
+      }
     }
   }
 
@@ -50,13 +64,17 @@ export default {
     border-radius: 0;
     -webkit-appearance: none;
     padding: 5px 10px;
-    margin: 30px 0 0;
+    margin-top: 30px;
     width: 100%;
     height: 35px;
 
     &:focus {
       border: 1px $accent-color solid;
       outline: none;
+    }
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      margin-top: 20px;
     }
   }
 
@@ -68,11 +86,15 @@ export default {
       padding: 0;
       width: 20px;
       height: 20px;
-      margin: 0 10px 0 0 ;
+      margin: 0 10px 0 0;
 
       &:checked {
         background-color: $accent-color;
       }
+    }
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      margin-top: 20px;
     }
   }
 
@@ -88,7 +110,27 @@ export default {
     &__statement {
       width: 50%;
       text-align: right;
+
+      @media screen and (max-width: $breakpoint-mobile) {
+        width: 100%;
+        text-align: center;
+      }
     }
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      display: block;
+      margin-top: 20px;
+
+      .btn {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    display: block;
+    padding: 40px 20px;
   }
 }
 </style>
